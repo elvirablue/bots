@@ -1,0 +1,231 @@
+@mixin text($size) {
+  font-family: 'ASS-norm',  Arial, sans-serif;
+  font-size: $size;
+}
+
+@mixin text-bold($size) {
+  font-family: 'ASS-bold',  Arial, sans-serif;
+  font-size: $size;
+}
+@mixin text-black($size) {
+  font-family: 'ASS-black',  Arial, sans-serif;
+  font-size: $size;
+}
+@mixin text-light($size) {
+  font-family: 'ASS-light',  Arial, sans-serif;
+  font-size: $size;
+}
+@mixin text-thin($size) {
+  font-family: 'ASS-thin',  Arial, sans-serif;
+  font-size: $size;
+}
+
+@mixin text-arkhip($size) {
+  font-family: 'Arkhip',  Arial, sans-serif;
+  font-size: $size;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'ASS-norm', Arial, sans-serif;
+  color: $color-text;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+
+b, i, span, strong {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+body, html {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+
+}
+
+body {
+
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+h2 {
+  margin: 0;
+  padding: 0;
+  @include text(36px);
+  line-height: 1.3;
+  color: #333;
+  &.h-30 { font-size: 30px; }
+  @include media-breakpoint-down(lg) {
+
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 30px;
+    &.h-30 { font-size: 26px; }
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+    &.h-30 { font-size: 26px; }
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 24px;
+    &.h-30 { font-size: 22px; }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+ .nav {
+   display: none !important;
+ }
+}
+
+@include media-breakpoint-down(md) {
+
+}
+@include media-breakpoint-down(sm) {
+
+}
+@include media-breakpoint-down(xs) {
+
+}
+
+h1 {
+  @include text(58px);
+  @include media-breakpoint-down(md) {
+    font-size: 45px;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 30px;
+  }
+}
+
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: bottom;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tbody {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blue {
+  color: #4f9bfa !important;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: underline;
+  color: $color-text;
+  transition: color ease 0.2s;
+  outline: none !important;
+}
+
+.link:hover,
+.link:active,
+.link.active {
+  color: #26272d;
+}
+.marker {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 16px;
+    background: url("../img/ico/i-right-chevron.svg") center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left: -50px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &:before {
+      width: 16px;
+      height: 12px;
+      left: -25px;
+      top: 7px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.separator {
+  display: block;
+  height: 45px;
+  @include media-breakpoint-down(md) {
+    height: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    height: 0;
+  }
+}
+
+@mixin bg-img($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-bg {
+  background-image: none;
+  background-color: #ffffff;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+

@@ -1,0 +1,59 @@
+$color-placeholder: rgba(255,255,255,0.3);
+$color-input: #fff;
+.user-input {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-radius: 35px;
+  background-color: rgba(16,40,71,0.55);
+  border: 1px solid rgba(16,40,71,0.55);
+  height: 70px;
+  padding: 0 45px;
+  margin: 0;
+  outline: none;
+  color: $color-input;
+  @include text(16px);
+  line-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:active, &:focus {
+    border: 1px solid #1a81ff;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+  }
+}
+textarea.user-input {
+  max-width: 100%;
+  height: 170px;
+  line-height: 1.3;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+::-webkit-input-placeholder {
+  color: $color-placeholder;
+  opacity: 0.7;
+}
+
+::-moz-placeholder {
+  color: $color-placeholder;
+  opacity: 0.7;
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  color: $color-placeholder;
+  opacity: 0.7;
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  color: $color-placeholder;
+  opacity: 0.7;
+}
+

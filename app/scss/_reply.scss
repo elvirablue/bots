@@ -1,0 +1,55 @@
+.qq-reply {
+  padding: 100px 100px 50px;
+  text-align: center;
+
+  * {
+    color: #fff;
+  }
+  .t1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .row {
+    padding-top: 60px;
+  }
+  .qq {
+    font-size: 22px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  .reply {
+    font-size: 18px;
+    text-align: left;
+    opacity: 0.5;
+    padding-bottom: 45px;
+  }
+
+
+  @include media-breakpoint-down(lg) {
+    padding: 100px 50px 50px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .t1 { font-size: 20px; }
+    .qq { font-size: 18px; }
+    .reply { font-size: 16px;  padding-bottom: 25px;}
+    .row {
+      padding-top: 30px;
+    }
+
+  }
+  @include media-breakpoint-down(sm) {
+    .t1 {
+      text-align: left;
+      padding-left: 20px;
+    }
+    padding: 100px 0 50px;
+    .row {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+
+  }
+}
