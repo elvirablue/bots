@@ -5332,6 +5332,15 @@ a {
   display: block;
   position: relative; }
 
+.fs > .nav {
+  display: block;
+  width: 66px;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 320px;
+  right: -33px; }
+
 .fs * {
   color: #fff; }
 
@@ -5407,7 +5416,7 @@ a {
   padding: 100px 0 0 90px;
   position: relative; }
 
-.fs .info .nav {
+.fs .info > .nav {
   position: absolute;
   top: 150px;
   left: -33px; }
@@ -5521,11 +5530,10 @@ a {
   .fs .button {
     margin-top: 30px; }
   .fs .list {
-    width: 100%; } }
-
-.fs .info .title {
-  width: 100%;
-  font-size: 20px; }
+    width: 100%; }
+  .fs .info .title {
+    width: 100%;
+    font-size: 20px; } }
 
 .modal-backdrop {
   opacity: 0 !important; }

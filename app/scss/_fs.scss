@@ -1,6 +1,15 @@
 .fs {
   display: block;
   position: relative;
+  > .nav {
+    display: block;
+    width: 66px;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 320px;
+    right: -33px;
+  }
   * {
     color: #fff;
   }
@@ -66,7 +75,7 @@
     width: 100%;
     padding: 100px 0 0 90px;
     position: relative;
-    .nav {
+    > .nav {
       position: absolute;
       top: 150px;
       left: -33px;
@@ -193,7 +202,7 @@
       max-width: none;
     }
     .img {
-     width: 100vw;
+      width: 100vw;
       min-width: 400px;
       height: auto;
       position: static;
@@ -205,11 +214,12 @@
     .list {
       width: 100%;
     }
-  }
-  .info {
-    .title {
-      width: 100%;
-      font-size: 20px;
+
+    .info {
+      .title {
+        width: 100%;
+        font-size: 20px;
+      }
     }
   }
 }
