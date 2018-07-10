@@ -12,13 +12,15 @@
     width: 730px;
 
   }
-  .list {
-    padding: 70px 0 0;
+  .slider-wrapper {
+    padding: 120px 0 0;
     .item {
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
       align-items: flex-start;
+      width: 100%;
+      height: auto;
       margin-bottom: 90px;
       color: #333;
       &:last-child {
@@ -83,7 +85,7 @@
         }
       }
     }
-    .item:nth-child(odd) {
+    .item.odd {
       img {
         order: 1;
         margin-right: 90px;
@@ -92,7 +94,7 @@
         order: 2;
       }
     }
-    .item:nth-child(even) {
+    .item.even {
       img {
         order: 2;
         margin-left: 90px;
@@ -104,10 +106,10 @@
   }
   @include media-breakpoint-down(lg) {
     padding: 0 50px;
-    .list {
+    .slider-wrapper {
       .item {
         img {
-          width: 35vw
+          width: 35vw;
         }
         .text {
           min-width: 40vw;
@@ -115,7 +117,6 @@
       }
     }
   }
-
   @include media-breakpoint-down(md) {
     padding: 0;
     h2 {
@@ -123,29 +124,50 @@
       max-width: 600px;
       margin: 0 auto;
     }
-    .list {
+    .slider-wrapper {
+      .item.odd img {
+        width: 30vw;
+        margin-right: 50px;
+      }
+      .item.even img {
+        width: 30vw;
+        margin-left: 50px;
+      }
+      .text {
+        min-width: 40vw;
+        .title {
+          font-size: 20px
+        }
+        ul li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    .slider-wrapper {
+      .owl-nav {
+        left: 0;
+        right: 0;
+        margin: 0;
+       text-align: center;
+      }
       .item {
         flex-flow: column nowrap;
-        max-width: 450px;
+        max-width: 350px;
         margin: 0 auto;
         padding-bottom: 10px;
         margin-bottom: 20px;
-        border-bottom: 1px solid #e0e0e0;
+
         img {
           min-width: 270px;
           margin: 0 auto 20px !important;
         }
-        .text {
-          min-width: 40vw;
-          .title {
-            font-size: 20px
-          }
-          ul li {
-            font-size: 16px;
-          }
-        }
+
       }
-      .item:nth-child(even) {
+      .item.even {
         img {
           order: 1;
         }
@@ -157,7 +179,7 @@
 
   }
   @include media-breakpoint-down(sm) {
-    .list .item {
+    .slider-wrapper .item {
       .text .title {
         font-size: 18px
       }
@@ -169,7 +191,7 @@
     }
   }
   @include media-breakpoint-down(xs) {
-    .list .item  .text .title {
+    .slider-wrapper .item  .text .title {
       flex-flow: column nowrap;
       .number {
         padding-top: 5px;
